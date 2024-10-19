@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins, Volkhov } from "next/font/google";
+import { Inter, Volkhov } from "next/font/google";
 import "./globals.css";
 
-// Import Poppins and Volkhov from Google Fonts
-const poppins = Poppins({
+
+const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "600", "700"], // Specify the weights you need
-  variable: "--font-poppins", // Use CSS variable for Poppins
+  variable: "--font-inter", // Use CSS variable for Poppins
 });
 
 const volkhov = Volkhov({
@@ -26,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${volkhov.variable}`}>
+    <html lang="en" className={`${inter.variable} ${volkhov.variable}`}>
       <body className="antialiased">
         {children}
       </body>

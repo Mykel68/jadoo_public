@@ -1,22 +1,97 @@
-import { Button } from '@/components/ui/button'
-import React from 'react'
+// import { Button } from '@/components/ui/button'
+// import React from 'react'
 
+// import Traveller from '@/assets/Traveller 1.svg';
+
+// export default function Hero() {
+//     return (
+//         <div className="grid grid-cols-2 gap-10 mt-5 ">
+//             <div className="flex items-start justify-center flex-col gap-y-4">
+//                 <h1 className='text-[#DF6951] text-xl font-bold text-balance font-[poppins]'>BEST DESTINATIONS AROUND THE WORLD</h1>
+//                 <p className='text-[#181E4B] text-[5.25rem] font-bold' style={{
+//                     lineHeight: '89px', letterSpacing: '-3.36px'
+//                 }}>Travel, enjoy and live a new and full life</p>
+//                 <p className='text-[#5E6282] text-[1rem] font-[Volkhov] text-balance font-medium ' style={{
+//                     lineHeight: '1.875rem'
+//                 }}>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
+//                 <div className="flex gap-5 items-center justify-center">
+//                     <Button variant={'secondary'} size={'lg'}>Find out more</Button>
+//                     <div className="flex items-center justify-center  ">
+//                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" fill="none">
+//                             <g filter="url(#filter0_d_6_419)">
+//                                 <circle cx="56" cy="41" r="26" fill="#DF6951" />
+//                             </g>
+//                             <path d="M64 42.5L52.75 48.9952L52.75 36.0048L64 42.5Z" fill="white" />
+//                             <defs>
+//                                 <filter id="filter0_d_6_419" x="0" y="0" width="112" height="112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+//                                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
+//                                     <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+//                                     <feOffset dy="15" />
+//                                     <feGaussianBlur stdDeviation="15" />
+//                                     <feColorMatrix type="matrix" values="0 0 0 0 0.87451 0 0 0 0 0.411765 0 0 0 0 0.317647 0 0 0 0.3 0" />
+//                                     <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_6_419" />
+//                                     <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_6_419" result="shape" />
+//                                 </filter>
+//                             </defs>
+//                         </svg>
+//                         <p className='font-poppins text-[#686D77] text-[1rem] font-medium text-balance'>Play Now</p>
+//                     </div>
+//                 </div>
+//             </div>
+//             <div className="z-10 relative">
+
+//                 <svg xmlns="http://www.w3.org/2000/svg" width="167" height="154" viewBox="0 0 167 154" fill="none">
+//                     <path d="M96.1744 86.8466C94.816 87.1508 93.493 87.7144 92.2875 88.5018C89.1467 90.5031 87.3194 93.3598 88.2063 94.882C89.0933 96.4041 92.3583 96.0148 95.4991 94.0135C96.7209 93.2539 97.8063 92.2831 98.6884 91.1611C99.0978 90.619 99.1713 89.9436 98.8761 89.4387L97.7239 87.4613C97.4307 86.9548 96.8226 86.7139 96.1744 86.8466Z" fill="#D5D6DB" />
+//                     <path d="M88.2875 59.8538C87.3025 60.0746 86.3431 60.4834 85.4688 61.0545C83.192 62.5053 81.8662 64.5767 82.5088 65.6794C83.1514 66.7822 85.5199 66.4997 87.7965 65.0491C88.6824 64.498 89.4693 63.7937 90.1091 62.9801C90.4056 62.5872 90.4587 62.0978 90.2447 61.7317L89.4105 60.2999C89.1982 59.9328 88.7576 59.7577 88.2875 59.8538Z" fill="#D5D6DB" />
+//                     <path d="M75.4733 60.9839C75.254 60.9594 75.0202 61.0178 74.8174 61.1473L69.4693 64.5556C69.0219 64.8398 68.8429 65.3871 69.0698 65.7783C69.1217 65.8679 69.1927 65.9445 69.279 66.0035L82.4606 75.0884L100.294 63.7237L75.4733 60.9839Z" fill="#029BC5" />
+//                     <path d="M131.85 59.6986L83.3181 90.2507L54.6054 101.676L39.9623 104.587L38.3513 101.85L119.246 51.903C121.657 50.4081 124.343 49.4906 127.032 49.2435C128.209 49.1416 129.372 49.1807 130.493 49.3595C131.487 49.5102 132.43 49.801 133.294 50.223C134.258 50.7013 136.092 50.7564 136.687 51.7093C136.689 51.7077 138.091 56.0821 131.85 59.6986Z" fill="#E1E6E9" />
+//                     <path d="M83.9615 86.2086L62.9662 119.679C62.704 120.149 62.8597 120.675 63.3135 120.854C63.5921 120.964 63.933 120.921 64.2194 120.739L69.5634 117.349C70.5913 116.696 71.5014 115.868 72.2375 114.914L112.954 67.0454L83.9615 86.2086Z" fill="#029BC5" />
+//                     <path d="M30.9819 85.0914C30.6317 84.9717 30.2149 85.0338 29.8631 85.2578L25.4456 88.0712C24.8437 88.4543 24.6038 89.1907 24.9097 89.7164C24.9679 89.8163 25.0436 89.9042 25.1344 89.9767L37.5111 99.889L50.5241 91.7609L30.9819 85.0914Z" fill="#029BC5" />
+//                     <path d="M41.6595 101.676L34.998 111.006C34.9003 111.14 34.9233 111.308 35.0492 111.382C35.1401 111.434 35.2641 111.425 35.3649 111.357L39.4931 108.741C39.5252 108.721 39.5542 108.696 39.5782 108.667L49.3118 96.8318L41.6595 101.676Z" fill="#029BC5" />
+//                     <path d="M129.697 49.7625C128.542 49.5771 127.344 49.5375 126.132 49.6441C124.951 51.2952 124.196 53.1499 123.943 55.0233C123.924 55.3996 124.227 55.6705 124.62 55.6283C124.742 55.615 124.864 55.5721 124.973 55.5034L132.581 50.6591C131.692 50.2205 130.72 49.9186 129.697 49.7625Z" fill="#029BC5" />
+//                     <path d="M113.117 58.6699L118.084 55.533L122.711 63.402L117.744 66.5389L113.117 58.6699Z" fill="#D5D6DB" />
+//                     <path d="M109.992 61.784C109.394 62.1631 109.154 62.8919 109.458 63.4116L109.95 64.2536C110.274 64.7601 111.014 64.8491 111.602 64.4524C112.162 64.0746 112.387 63.388 112.117 62.8809L111.625 62.039C111.321 61.5197 110.591 61.4054 109.992 61.784Z" fill="#3A556A" />
+//                     <path d="M105.528 64.5555C104.929 64.9346 104.69 65.6634 104.994 66.1831L105.486 67.0251C105.81 67.5316 106.549 67.6206 107.137 67.2239C107.697 66.8461 107.923 66.1594 107.653 65.6524L107.161 64.8104C106.857 64.2913 106.126 64.1771 105.528 64.5555Z" fill="#3A556A" />
+//                     <path d="M101.062 67.3297C100.464 67.7094 100.226 68.4373 100.529 68.9565L101.021 69.7985C101.345 70.3049 102.085 70.394 102.673 69.9973C103.233 69.6195 103.458 68.9329 103.188 68.4258L102.696 67.5839C102.392 67.0642 101.661 66.9504 101.062 67.3297Z" fill="#3A556A" />
+//                     <path d="M96.5975 70.1012C95.9996 70.4808 95.7612 71.2088 96.0648 71.728L96.5571 72.57C96.881 73.0765 97.6202 73.1655 98.2085 72.7688C98.7683 72.391 98.9938 71.7044 98.724 71.1973L98.2317 70.3554C97.9276 69.8358 97.196 69.722 96.5975 70.1012Z" fill="#3A556A" />
+//                     <path d="M92.1335 72.8743C91.5353 73.2541 91.2967 73.9824 91.6005 74.5019L92.0931 75.3442C92.3968 75.8635 93.1281 75.9772 93.7264 75.5982C94.3248 75.2192 94.5637 74.491 94.26 73.9718L93.7674 73.1294C93.4645 72.6097 92.7335 72.4952 92.1348 72.8735C92.1343 72.8738 92.134 72.874 92.1335 72.8743Z" fill="#3A556A" />
+//                     <path d="M87.6691 75.6458C87.0709 76.0256 86.8324 76.7539 87.1362 77.2733L87.6288 78.1157C87.9325 78.635 88.6637 78.7487 89.2621 78.3697C89.8604 77.9907 90.0993 77.2625 89.7957 76.7432L89.3031 75.9009C89.0002 75.3812 88.2692 75.2667 87.6704 75.645C87.6699 75.6453 87.6694 75.6457 87.6691 75.6458Z" fill="#3A556A" />
+//                     <path d="M83.2045 78.4193C82.6063 78.7991 82.3678 79.5273 82.6716 80.0468L83.1642 80.8891C83.4686 81.4078 84.2002 81.5204 84.7979 81.1409C85.3946 80.7621 85.633 80.0355 85.3308 79.5168L84.8382 78.6745C84.5346 78.1549 83.8034 78.0406 83.2045 78.4193Z" fill="#3A556A" />
+//                     <path d="M78.7399 81.1927C78.1417 81.5725 77.9032 82.3007 78.207 82.8202L78.6996 83.6626C79.004 84.1814 79.7356 84.2939 80.3333 83.9144C80.93 83.5356 81.1684 82.8089 80.8662 82.2903L80.3736 81.4479C80.07 80.9283 79.3388 80.814 78.7399 81.1927Z" fill="#3A556A" />
+//                     <path d="M74.2756 83.9642C73.6773 84.344 73.4388 85.0722 73.7426 85.5917L74.2352 86.434C74.5396 86.9528 75.2712 87.0653 75.869 86.6859C76.4657 86.307 76.7041 85.5804 76.4018 85.0617L75.9092 84.2194C75.6054 83.7 74.8742 83.5856 74.2756 83.9642Z" fill="#3A556A" />
+//                     <path d="M69.8097 86.7376C69.2114 87.1166 68.9725 87.8448 69.2762 88.3641L69.2768 88.3651L69.7694 89.2075C70.0738 89.7263 70.8054 89.8389 71.4031 89.4594C71.9999 89.0805 72.2382 88.3539 71.936 87.8352L71.4434 86.9929C71.1399 86.4732 70.4086 86.3589 69.8097 86.7376Z" fill="#3A556A" />
+//                     <path d="M65.3466 89.5091C64.7483 89.8881 64.5094 90.6163 64.813 91.1355L64.8137 91.1366L65.3063 91.9789C65.6107 92.4977 66.3423 92.6103 66.94 92.2308C67.5368 91.852 67.7752 91.1253 67.4729 90.6067L66.9803 89.7644C66.6765 89.2449 65.9453 89.1306 65.3466 89.5091Z" fill="#3A556A" />
+//                 </svg>
+
+//                 <div className="absolute top-0 right-0">
+//                     <img src={Traveller.src} alt="Traveller" />
+//                 </div>
+//             </div>
+//         </div>
+//     )
+// }
+import { Button } from '@/components/ui/button';
+import React from 'react';
 import Traveller from '@/assets/Traveller 1.svg';
 
 export default function Hero() {
     return (
-        <div className="grid grid-cols-2 gap-10 mt-5 ">
-            <div className="flex items-start justify-center flex-col gap-y-4">
-                <h1 className='text-[#DF6951] text-xl font-bold text-balance font-[poppins]'>BEST DESTINATIONS AROUND THE WORLD</h1>
-                <p className='text-[#181E4B] text-[5.25rem] font-bold' style={{
-                    lineHeight: '89px', letterSpacing: '-3.36px'
-                }}>Travel, enjoy and live a new and full life</p>
-                <p className='text-[#5E6282] text-[1rem] font-[Volkhov] text-balance font-medium ' style={{
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-5 lg:mt-0 px-4 md:z-0 z-20">
+            <div className="flex items-start justify-center flex-col gap-y-4 mt-4 md:mt-0">
+                <h1 className='text-[#DF6951] text-2xl md:text-xl font-bold font-[poppins]'>
+                    BEST DESTINATIONS AROUND THE WORLD
+                </h1>
+                <p className='text-[#181E4B] text-4xl md:text-7xl font-bold' >
+                    Travel, enjoy and live a new and full life
+                </p>
+                <p className='text-[#5E6282] text-base md:text-[1.2rem] font-[Volkhov] text-balance font-medium ' style={{
                     lineHeight: '1.875rem'
-                }}>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.</p>
-                <div className="flex gap-5 items-center justify-center">
+                }}>
+                    Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it engrossed listening. Park gate sell they west hard for the.
+                </p>
+                <div className="flex gap-3 md:gap-5 items-center justify-center">
                     <Button variant={'secondary'} size={'lg'}>Find out more</Button>
-                    <div className="flex items-center justify-center  ">
+                    <div className="flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" fill="none">
                             <g filter="url(#filter0_d_6_419)">
                                 <circle cx="56" cy="41" r="26" fill="#DF6951" />
@@ -34,13 +109,12 @@ export default function Hero() {
                                 </filter>
                             </defs>
                         </svg>
-                        <p className='font-poppins text-[#686D77] text-[1rem] font-medium text-balance'>Play Now</p>
+                        <p className='font-poppins text-[#686D77] text-xs md:text-[1rem] font-medium'>Play Now</p>
                     </div>
                 </div>
             </div>
             <div className="z-10 relative">
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="167" height="154" viewBox="0 0 167 154" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="167" height="154" viewBox="0 0 167 154" fill="none" className='absolute top-16 left-8 hidden md:block'>
                     <path d="M96.1744 86.8466C94.816 87.1508 93.493 87.7144 92.2875 88.5018C89.1467 90.5031 87.3194 93.3598 88.2063 94.882C89.0933 96.4041 92.3583 96.0148 95.4991 94.0135C96.7209 93.2539 97.8063 92.2831 98.6884 91.1611C99.0978 90.619 99.1713 89.9436 98.8761 89.4387L97.7239 87.4613C97.4307 86.9548 96.8226 86.7139 96.1744 86.8466Z" fill="#D5D6DB" />
                     <path d="M88.2875 59.8538C87.3025 60.0746 86.3431 60.4834 85.4688 61.0545C83.192 62.5053 81.8662 64.5767 82.5088 65.6794C83.1514 66.7822 85.5199 66.4997 87.7965 65.0491C88.6824 64.498 89.4693 63.7937 90.1091 62.9801C90.4056 62.5872 90.4587 62.0978 90.2447 61.7317L89.4105 60.2999C89.1982 59.9328 88.7576 59.7577 88.2875 59.8538Z" fill="#D5D6DB" />
                     <path d="M75.4733 60.9839C75.254 60.9594 75.0202 61.0178 74.8174 61.1473L69.4693 64.5556C69.0219 64.8398 68.8429 65.3871 69.0698 65.7783C69.1217 65.8679 69.1927 65.9445 69.279 66.0035L82.4606 75.0884L100.294 63.7237L75.4733 60.9839Z" fill="#029BC5" />
@@ -63,10 +137,8 @@ export default function Hero() {
                     <path d="M65.3466 89.5091C64.7483 89.8881 64.5094 90.6163 64.813 91.1355L64.8137 91.1366L65.3063 91.9789C65.6107 92.4977 66.3423 92.6103 66.94 92.2308C67.5368 91.852 67.7752 91.1253 67.4729 90.6067L66.9803 89.7644C66.6765 89.2449 65.9453 89.1306 65.3466 89.5091Z" fill="#3A556A" />
                 </svg>
 
-                <div className="absolute top-0 right-0">
-                    <img src={Traveller.src} alt="Traveller" />
-                </div>
+                <img src={Traveller.src} alt="Traveller" />
             </div>
         </div>
-    )
+    );
 }
