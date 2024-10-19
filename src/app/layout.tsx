@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Poppins, Volkhov } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// Import Poppins and Volkhov from Google Fonts
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], // Specify the weights you need
+  variable: "--font-poppins", // Use CSS variable for Poppins
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const volkhov = Volkhov({
+  subsets: ["latin"],
+  weight: ["400", "700"], // Specify the weights for Volkhov
+  variable: "--font-volkhov", // Use CSS variable for Volkhov
 });
 
 export const metadata: Metadata = {
@@ -24,10 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${poppins.variable} ${volkhov.variable}`}>
+      <body className="antialiased">
         {children}
       </body>
     </html>
