@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Logo from '@/assets/Logo.svg';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { Menu, X } from 'lucide-react';
 
 const navBarLinks = [

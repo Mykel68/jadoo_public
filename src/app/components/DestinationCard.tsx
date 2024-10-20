@@ -1,4 +1,5 @@
 import { Zap } from "lucide-react";
+import { useEffect } from "react";
 
 export default function DestinationCard({ image, alt, destination, price, duration }: any) {
     return (
