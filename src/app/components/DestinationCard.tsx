@@ -1,7 +1,6 @@
 import { Zap } from "lucide-react";
-import { useEffect } from "react";
 
-export default function DestinationCard({ image, alt, destination, price, duration }: any) {
+export default function DestinationCard({ image, alt, destination, price, duration }: { image: string, alt: string, destination: string, price: string, duration: string }) {
     return (
         <div className="bg-white rounded-xl shadow-lg overflow-hidden w-[19rem]">
             <img src={image} alt={alt} className="w-full h-48 object-cover object-center" />
