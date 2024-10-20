@@ -17,3 +17,4 @@ export default function DestinationCard({ image, alt, destination, price, durati
         </div>
     )
 }
+
