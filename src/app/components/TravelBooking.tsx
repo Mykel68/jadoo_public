@@ -7,7 +7,7 @@ import Woman from "@/assets/woman.svg"
 export default function Component() {
     return (
         <div className="container mx-auto px-4 py-8 max-w-6xl">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between flex-col space-y-3 md:flex-row items-center">
                 <div className="space-y-6">
                     <div>
                         <h1 className="text-sm font-medium text-gray-500 mb-2">Easy and Fast</h1>
@@ -43,7 +43,7 @@ export default function Component() {
                             alt="Woman overlooking Santorini"
                             className="w-full h-auto object-cover"
                         />
-                        <div className="absolute -bottom-20 -right-24 bg-white rounded-xl border-2 border-gray-200 p-4 shadow-lg">
+                        <div className="absolute hidden md:block -bottom-20 -right-24 bg-white rounded-xl border-2 border-gray-200 p-4 shadow-lg">
                             <h3 className="font-semibold text-lg mb-2">Trip To Greece</h3>
                             <p className="text-gray-600 mb-2">14-29 June | by Robbin joseph</p>
                             <div className="flex space-x-2 mb-2">

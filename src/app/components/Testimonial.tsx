@@ -1,22 +1,15 @@
 "use client"
 
 import * as React from "react"
-import { ChevronUp, ChevronDown } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import man from "@/assets/man.svg"
 
 const testimonials = [
     {
         quote: "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
-        name: "Mike taylor",
+        name: "Mike Taylor",
         location: "Lahore, Pakistan",
         avatar: man,
     },
@@ -35,7 +28,7 @@ const testimonials = [
 ]
 
 export default function VerticalTestimonialSlider() {
-    const [currentIndex, setCurrentIndex] = React.useState(0) // Add state for currentIndex
+    const [currentIndex, setCurrentIndex] = React.useState(0)
 
     const nextTestimonial = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
@@ -44,6 +37,11 @@ export default function VerticalTestimonialSlider() {
     const prevTestimonial = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length)
     }
+
+    React.useEffect(() => {
+        const interval = setInterval(nextTestimonial, 3000); // automatically progress every 3 seconds
+        return () => clearInterval(interval); // cleanup on unmount
+    }, []);
 
     return (
         <div className="max-w-6xl mx-auto px-4 py-12">
@@ -56,47 +54,41 @@ export default function VerticalTestimonialSlider() {
                     opts={{
                         align: "start",
                         loop: true,
+                        slidesToScroll: 1,
                     }}
-                    orientation="vertical"
                     className="h-[300px]"
-                    setApi={() => {
-                        nextTestimonial(); // Automatically progress the carousel
-                    }}
                 >
                     <CarouselContent className="-mt-1 h-[300px]">
-                        {testimonials.map((testimonial, index) => (
-                            <CarouselItem key={index} className="pt-1 md:basis-1/1">
-                                <Card className="border-none shadow-none">
-                                    <CardContent className="flex items-start p-6">
-                                        <Avatar className="w-12 h-12 mr-4">
-                                            <AvatarImage src={testimonial.avatar.src} alt={testimonial.name} />
-                                            <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
-                                        </Avatar>
-                                        <div>
-                                            <p className="text-lg mb-4">{testimonial.quote}</p>
-                                            <h3 className="font-semibold">{testimonial.name}</h3>
-                                            <p className="text-sm text-gray-500">{testimonial.location}</p>
-                                        </div>
-                                    </CardContent>
-                                </Card>
-                            </CarouselItem>
-                        ))}
+                        <CarouselItem key={currentIndex} className="pt-1 md:basis-1/1">
+                            <Card className="border-none shadow-none">
+                                <CardContent className="flex items-start p-6">
+                                    <Avatar className="w-12 h-12 mr-4">
+                                        <AvatarImage src={testimonials[currentIndex].avatar} alt={testimonials[currentIndex].name} />
+                                        <AvatarFallback>{testimonials[currentIndex].name[0]}</AvatarFallback>
+                                    </Avatar>
+                                    <div>
+                                        <p className="text-lg mb-4">{testimonials[currentIndex].quote}</p>
+                                        <h3 className="font-semibold">{testimonials[currentIndex].name}</h3>
+                                        <p className="text-sm text-gray-500">{testimonials[currentIndex].location}</p>
+                                    </div>
+                                </CardContent>
+                            </Card>
+                        </CarouselItem>
                     </CarouselContent>
-                    <CarouselPrevious onClick={prevTestimonial} className="left-1/2 -translate-x-1/2 top-0 -translate-y-full">
-                        <ChevronUp className="h-4 w-4" />
-                    </CarouselPrevious>
-                    <CarouselNext onClick={nextTestimonial} className="left-1/2 -translate-x-1/2 bottom-0 translate-y-full">
-                        <ChevronDown className="h-4 w-4" />
-                    </CarouselNext>
                 </Carousel>
                 <div className="flex justify-center mt-4">
-                    {testimonials.map((_, index) => (
-                        <div
-                            key={index}
-                            className={`h-2 w-2 rounded-full mx-1 ${index === currentIndex ? "bg-blue-500" : "bg-gray-300"
-                                }`}
-                        />
-                    ))}
+                    <button
+                        onClick={prevTestimonial}
+                        className="mr-2 bg-gray-200 p-2 rounded hover:bg-gray-300"
+                    >
+                        Previous
+                    </button>
+                    <button
+                        onClick={nextTestimonial}
+                        className="bg-gray-200 p-2 rounded hover:bg-gray-300"
+                    >
+                        Next
+                    </button>
                 </div>
             </div>
         </div>
