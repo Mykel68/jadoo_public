@@ -2,10 +2,14 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Category from "./components/Category";
 import TopDestination from "./components/TopDestination";
+import TravelBooking from "./components/TravelBooking";
+import VerticalTestimonialSlider from "./components/Testimonial";
+import LogoSlider from "./components/LogoSlider";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:px-24 px-2 ">
+    <>    <div className="flex flex-col md:px-24 px-2 ">
       <div className="realtive">
         <div className="absolute top-0 right-0  ">
           <svg xmlns="http://www.w3.org/2000/svg" width="704" height="724" viewBox="0 0 704 724" fill="none">
@@ -17,6 +21,12 @@ export default function Home() {
       <Hero />
       <Category />
       <TopDestination />
+      <TravelBooking />
+      <VerticalTestimonialSlider />
+      <LogoSlider />
     </div>
+      <Footer />
+    </>
+
   );
 }

@@ -5,7 +5,7 @@ import DestinationCard from "./DestinationCard"
 
 export default function Component() {
     return (
-        <section className="py-12 px-4 md:px-6 lg:px-8 max-w-6xl mx-auto">
+        <section className="py-12 px-4 md:px-6  max-w-6xl mx-auto">
             <div className="text-center mb-12">
                 <h2 className="text-sm uppercase tracking-wide text-gray-500 mb-2">Top Selling</h2>
                 <h1 className="text-3xl md:text-4xl font-bold text-[#1a0b4b]">Top Destinations</h1>
